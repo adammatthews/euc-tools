@@ -4,6 +4,7 @@
 #
 # Created by Adam Matthews - adam@adammatthews.co.uk // matthewsa@vmware.com 
 # Date: 6th July 2021
+# Update: 13th October 2021
 #
 
 import subprocess, sys, getopt, re, argparse, os, uuid
@@ -49,30 +50,29 @@ if args.apps:
 	ps = subprocess.Popen(("ls", f"{app}/Contents/MacOS"), stdout=subprocess.PIPE)
 	sha_contents = subprocess.check_output(('head', '-1'), stdin=ps.stdout)
 
-
 	#sha_contents = str(list_files.stdout, 'utf-8').rstrip()
 	name = str(sha_contents, 'utf-8').rstrip()
 	sha = ["/usr/bin/openssl","dgst","-sha256",f"{app}/Contents/MacOS/{name}"]
 	sha_value = subprocess.run(sha, capture_output=True) # returns the exit code in unix
 	sha_out = sha_value.stdout
-	# print(sha_contents)
 	m = re.search('(?<=\=).*', str(sha_out, 'utf-8'))
 	if m is not None:
 		sha256 = m.group(0).strip()
 	else:
 		sha256 = "none"
 
-
 	bundle_plist = subprocess.run(["osascript", "-e", f"id of app \"{name}\""], capture_output=True)
 	bundleid = str(bundle_plist.stdout, 'utf-8').strip()
-
+	print(f"")
+	print(f"----- App and Process Blocking Details for Custom Settings Profile-----")
 	print(f"Name: {name}")
 	print(f"File Path: {app}/Contents/MacOS")
 	print(f"CD Hash: {cdhash}")
 	print(f"Team ID: {teamid}")
 	print(f"SHA-256: {sha256}")
 	print(f"Bundle ID: {bundleid}")
-    
+	print(f"")
+
 	print("<dict>")
 	print("\t<key>Restrictions</key>")
 	print("\t<array>")
