@@ -5,7 +5,7 @@ A collection of resources collected over the years. Mostly for supporting VMware
 
 ## VMware Release Notes
 
-[UEM] (https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/rn/Workspace-ONE-Product.html)
+[UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/rn/Workspace-ONE-Product.html)
 
 [Hub Services](https://docs.vmware.com/en/VMware-Workspace-ONE/services/rn/VMware-Workspace-ONE-Hub-Services-Release-Notes.html)
 
@@ -55,16 +55,28 @@ A collection of resources collected over the years. Mostly for supporting VMware
 ## Useful Tools
 
 [Online UUID Generator](https://www.uuidgenerator.net/) 
+
 [SSL Test - Qualsys](https://www.ssllabs.com/ssltest/)
+
 [Whats My Chain Cert - Cert Chain validator](https://whatsmychaincert.com/)
+
 [MX Toolbox - DNS helper tools](https://mxtoolbox.com/SuperTool.aspx)
+
 [Random Key and Password Generator](https://randomkeygen.com/) 
+
 [SAML Validator](https://www.samltool.com/validate_response.php) 
+
 [Sysadmin Cheatsheet - collection of useful resources](https://docs.j7k6.org/)
+
 [Webhook testing site](https://webhook.site/)
+
 [Crontab Guru - validate what crontab expressions you need](https://crontab.guru/)
+
 [Clarity Design System - the VMware tool design system](https://clarity.design/) 
+
 [Random.org - useful randomised things](https://www.random.org/) 
+
 [One Time Secret - share a password/key with a once time link](https://onetimesecret.com/) 
+
 [Raindrop.io - Centralised Bookmarks storage](https://raindrop.io/) 
 
